@@ -1,6 +1,6 @@
 /*BEGIN PS4 Controller Styling*/
 .controller.ds4 {
-    background: url(https://raw.githubusercontent.com/viktornedergaard2003-gif/ps5-cherry-blossom/main/cherry-blossom.svg) no-repeat center / 1200px 700px, url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/White_SkinNo-Buttons.png) no-repeat center / 1200px 700px;
+    background: url(https://raw.githubusercontent.com/viktornedergaard2003-gif/ps5-cherry-blossom/main/cherry-blossom.svg) no-repeat center / 1200px 700px, url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/White_SkinNo-Buttons.png) no-repeat center / 1200px 700px;
     height: 700px;
     width: 1200px;
     /*    margin-left: -403px;
@@ -22,7 +22,7 @@
 .ds4 .trigger {
     width: 99px;
     height: 100%;
-    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Trigger_Pressed.png);
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/Trigger_Pressed.png);
     opacity: 0;
 }
 
@@ -38,7 +38,7 @@
 .ds4 .bumper {
     width: 200px;
     height: 45px;
-    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Bumper.png) no-repeat;
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/Bumper.png) no-repeat;
     opacity: 0;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .ds4 .touchpad.pressed {
-    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Touchpad.png) no-repeat center;
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/Touchpad.png) no-repeat center;
 }
 
 .ds4 .meta {
@@ -86,7 +86,7 @@
 }
 
 .ds4 .meta.pressed {
-    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Home.png) no-repeat center;
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/Home.png) no-repeat center;
 }
 
 .ds4 .p0{
@@ -110,7 +110,7 @@ background-position: 0 -70px;
 }
 
 .ds4 .back, .ds4 .start {
-    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Select.png);
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/Select.png);
     width: 26px;
     height: 43px;
     opacity: 0;
@@ -156,7 +156,7 @@ background-position: 0 -70px;
     position: absolute;
     width: 55px;
     height: 55px;
-    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/FaceButtons.png);
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/FaceButtons.png);
 }
 
 .ds4 .button.pressed {
@@ -197,7 +197,7 @@ background-position: 0 -70px;
 
 .ds4 .stick {
     position: absolute;
-    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Sticks.png);
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/Sticks.png);
     height: 94px;
     width: 94px;
 }
@@ -229,7 +229,7 @@ background-position: 0 -70px;
 }
 
 .ds4 .face {
-    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Dpad.png);
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/Dpad.png);
     position: absolute;
 }
 
@@ -279,7 +279,7 @@ background-position: 0 -70px;
 /*END PS4 Controller Styling*/
 
 .ds4.white .back, .ds4 .start {
-    background-image: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Start.png);
+    background-image: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/main/Start.png);
     width: 26px;
     height: 43px;
 }
@@ -287,5 +287,5 @@ background-position: 0 -70px;
 /*END PS4 White Controller Styling*/
 
 
-/* Cherry blossom finish; original controller geometry and live input sprites preserved. */
-.controller.ds4 { background-size: 1200px 700px, 1200px 700px; filter: drop-shadow(0 8px 12px rgba(125,76,94,.18)); }
+/* White shell with sakura artwork; retain original live button-state sprites. */
+.controller.ds4 { background-size: 1200px 700px, 1200px 700px; filter: drop-shadow(0 8px 12px rgba(125,76,94,.16)); }
