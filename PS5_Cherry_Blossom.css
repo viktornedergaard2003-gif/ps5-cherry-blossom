@@ -1,0 +1,90 @@
+/* Cherry Blossom DualSense theme for GamepadViewer
+   Loaded through GamepadViewer's editcss parameter.
+   Keep this stylesheet additive so the original controller layout and live input states remain intact. */
+
+:root {
+  --sakura-pink: #f2a8bd;
+  --sakura-deep: #d96f96;
+  --sakura-pale: #fff0f5;
+  --sakura-ink: #8b5268;
+}
+
+/* Clean white porcelain body with a soft sakura edge */
+.controller,
+.controller.ds5,
+.controller.xbox,
+.controller.ps5 {
+  filter: drop-shadow(0 8px 14px rgba(105, 48, 72, .18));
+}
+
+/* Controller surfaces: retain geometry, brighten the shell */
+.ds5 .face,
+.ds5 .meta,
+.ds5 .touchpad,
+.ds5 .back,
+.ds5 .front,
+.ds5 .bumper,
+.ds5 .trigger,
+.ds5 .stick,
+.ds5 .button,
+.ds5 .dpad,
+.ds5 .abxy {
+  --sakura-shell: #fffdfd;
+}
+
+/* Soft pink accent on interactive parts without changing their position */
+.ds5 .button,
+.ds5 .dpad,
+.ds5 .abxy,
+.ds5 .stick,
+.ds5 .bumper,
+.ds5 .trigger {
+  filter: drop-shadow(0 1px 1px rgba(199, 93, 133, .22));
+}
+
+/* Sakura blossom artwork: subtle repeating floral pattern over the shell.
+   The layered gradients are deliberately transparent so live button states show. */
+.ds5 .face,
+.ds5 .touchpad,
+.ds5 .back,
+.ds5 .front {
+  background-color: #fffdfd !important;
+  background-image:
+    radial-gradient(circle at 18% 22%, rgba(242,168,189,.55) 0 2px, transparent 2.7px),
+    radial-gradient(circle at 22% 18%, rgba(217,111,150,.48) 0 3px, transparent 3.8px),
+    radial-gradient(circle at 26% 24%, rgba(255,210,223,.9) 0 4px, transparent 5px),
+    radial-gradient(ellipse at 20% 20%, rgba(239,154,183,.42) 0 12%, transparent 13%),
+    radial-gradient(circle at 78% 72%, rgba(242,168,189,.45) 0 2px, transparent 2.8px),
+    radial-gradient(circle at 82% 68%, rgba(217,111,150,.4) 0 3px, transparent 3.8px),
+    radial-gradient(circle at 74% 76%, rgba(255,210,223,.85) 0 4px, transparent 5px),
+    radial-gradient(ellipse at 78% 72%, rgba(239,154,183,.35) 0 13%, transparent 14%),
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(255,246,249,.92)) !important;
+  background-size: 100% 100%;
+}
+
+/* Pink trim and gentle highlights */
+.ds5 .touchpad {
+  border-color: rgba(217,111,150,.55) !important;
+  box-shadow: inset 0 0 0 1px rgba(255,255,255,.9), 0 2px 7px rgba(217,111,150,.12);
+}
+
+.ds5 .button,
+.ds5 .dpad button,
+.ds5 .abxy button {
+  border-color: rgba(226,151,176,.55) !important;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,.95), 0 1px 3px rgba(145,75,101,.12);
+}
+
+/* Active inputs remain clearly visible */
+.ds5 .button.pressed,
+.ds5 .pressed,
+.ds5 .button.active {
+  filter: brightness(.96) saturate(1.25);
+  box-shadow: inset 0 1px 5px rgba(198,76,124,.35), 0 0 0 2px rgba(242,168,189,.25) !important;
+}
+
+/* Sakura-toned center details */
+.ds5 .sticks,
+.ds5 .stick {
+  border-color: rgba(220,151,176,.48) !important;
+}
