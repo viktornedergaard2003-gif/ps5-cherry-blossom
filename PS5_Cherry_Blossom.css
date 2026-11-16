@@ -1,138 +1,291 @@
-/* Cherry Blossom DualSense theme for GamepadViewer
-   Loaded through GamepadViewer's editcss parameter.
-   Keep this stylesheet additive so the original controller layout and live input states remain intact. */
-
-:root {
-  --sakura-pink: #f2a8bd;
-  --sakura-deep: #d96f96;
-  --sakura-pale: #fff0f5;
-  --sakura-ink: #8b5268;
+/*BEGIN PS4 Controller Styling*/
+.controller.ds4 {
+    background: url(https://raw.githubusercontent.com/viktornedergaard2003-gif/ps5-cherry-blossom/main/cherry-blossom.svg) no-repeat center / 1200px 700px, url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/White_SkinNo-Buttons.png) no-repeat center / 1200px 700px;
+    height: 700px;
+    width: 1200px;
+    /*    margin-left: -403px;
+        margin-top: -280px;*/
 }
 
-/* Clean white porcelain body with a soft sakura edge */
-.controller,
-.controller.ds5,
-.controller.xbox,
-.controller.ps5 {
-  filter: drop-shadow(0 8px 14px rgba(105, 48, 72, .18));
+.ds4.disconnected div {
+    display: none;
 }
 
-/* Controller surfaces: retain geometry, brighten the shell */
-.ds5 .face,
-.ds5 .meta,
-.ds5 .touchpad,
-.ds5 .back,
-.ds5 .front,
-.ds5 .bumper,
-.ds5 .trigger,
-.ds5 .stick,
-.ds5 .button,
-.ds5 .dpad,
-.ds5 .abxy {
-  --sakura-shell: #fffdfd;
+.ds4 .triggers {
+    width: 598px;
+    height: 90px;
+    position: absolute;
+    left: 299px;
+    top: 38px;
 }
 
-/* Soft pink accent on interactive parts without changing their position */
-.ds5 .button,
-.ds5 .dpad,
-.ds5 .abxy,
-.ds5 .stick,
-.ds5 .bumper,
-.ds5 .trigger {
-  filter: drop-shadow(0 1px 1px rgba(199, 93, 133, .22));
+.ds4 .trigger {
+    width: 99px;
+    height: 100%;
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Trigger_Pressed.png);
+    opacity: 0;
 }
 
-/* Sakura blossom artwork: subtle repeating floral pattern over the shell.
-   The layered gradients are deliberately transparent so live button states show. */
-.ds5 .face,
-.ds5 .touchpad,
-.ds5 .back,
-.ds5 .front {
-  background-color: #fffdfd !important;
-  background-image:
-    radial-gradient(circle at 18% 22%, rgba(242,168,189,.55) 0 2px, transparent 2.7px),
-    radial-gradient(circle at 22% 18%, rgba(217,111,150,.48) 0 3px, transparent 3.8px),
-    radial-gradient(circle at 26% 24%, rgba(255,210,223,.9) 0 4px, transparent 5px),
-    radial-gradient(ellipse at 20% 20%, rgba(239,154,183,.42) 0 12%, transparent 13%),
-    radial-gradient(circle at 78% 72%, rgba(242,168,189,.45) 0 2px, transparent 2.8px),
-    radial-gradient(circle at 82% 68%, rgba(217,111,150,.4) 0 3px, transparent 3.8px),
-    radial-gradient(circle at 74% 76%, rgba(255,210,223,.85) 0 4px, transparent 5px),
-    radial-gradient(ellipse at 78% 72%, rgba(239,154,183,.35) 0 13%, transparent 14%),
-    linear-gradient(135deg, rgba(255,255,255,.96), rgba(255,246,249,.92)) !important;
-  background-size: 100% 100%;
+.ds4 .trigger.left {
+    float: left;
 }
 
-/* Pink trim and gentle highlights */
-.ds5 .touchpad {
-  border-color: rgba(217,111,150,.55) !important;
-  box-shadow: inset 0 0 0 1px rgba(255,255,255,.9), 0 2px 7px rgba(217,111,150,.12);
+.ds4 .trigger.right {
+    float: right;
+    background-position-x: 99px;
 }
 
-.ds5 .button,
-.ds5 .dpad button,
-.ds5 .abxy button {
-  border-color: rgba(226,151,176,.55) !important;
-  box-shadow: inset 0 1px 2px rgba(255,255,255,.95), 0 1px 3px rgba(145,75,101,.12);
+.ds4 .bumper {
+    width: 200px;
+    height: 45px;
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Bumper.png) no-repeat;
+    opacity: 0;
 }
 
-/* Active inputs remain clearly visible */
-.ds5 .button.pressed,
-.ds5 .pressed,
-.ds5 .button.active {
-  filter: brightness(.96) saturate(1.25);
-  box-shadow: inset 0 1px 5px rgba(198,76,124,.35), 0 0 0 2px rgba(242,168,189,.25) !important;
+.ds4 .bumpers {
+    position: absolute;
+    width: 672px;
+    height: 23px;
+    left: 263px;
+    top: 132px;
 }
 
-/* Sakura-toned center details */
-.ds5 .sticks,
-.ds5 .stick {
-  border-color: rgba(220,151,176,.48) !important;
+.ds4 .bumper.pressed {
+    opacity: 0.8;
+}
+
+.ds4 .bumper.left {
+    /* -webkit-transform: rotateY(180deg); */
+    /* transform: rotateY(180deg); */
+    float: left;
+}
+
+.ds4 .bumper.right {
+    float: right;
+    transform: rotateY(180deg);
+}
+
+.ds4 .touchpad {
+    width: 350px;
+    height: 300px;
+    position: absolute;
+    left: 422px;
+    top: 74px;
+}
+
+.ds4 .touchpad.pressed {
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Touchpad.png) no-repeat center;
+}
+
+.ds4 .meta {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 546px;
+    bottom: 264px;
+}
+
+.ds4 .meta.pressed {
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Home.png) no-repeat center;
+}
+
+.ds4 .p0{
+background-position: 0 -6px;
+}
+.ds4 .p1{
+background-position: 0 -28px;
+}
+.ds4 .p2{
+background-position: 0 -49px;
+}
+.ds4 .p3{
+background-position: 0 -70px;
+}*/
+.ds4 .arrows {
+    position: absolute;
+    width: 352px;
+    height: 46px;
+    top: 142px;
+    left: 227px;
+}
+
+.ds4 .back, .ds4 .start {
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Select.png);
+    width: 26px;
+    height: 43px;
+    opacity: 0;
+}
+.ds4 .start {
+    position: absolute;
+    left: 546px;
+    bottom: -30px;
+}
+.ds4 .back {
+    position: absolute;
+    left: 170px;
+    bottom: -30px;
 }
 
 
-/* GamepadViewer adds .edit when editcss= is used. These selectors are
-   intentionally scoped to that class so they work with the selected PS5 skin. */
-.edit .face,
-.edit .meta,
-.edit .touchpad,
-.edit .back,
-.edit .front,
-.edit .bumper,
-.edit .trigger,
-.edit .stick,
-.edit .button,
-.edit .dpad,
-.edit .abxy {
-  filter: drop-shadow(0 1px 2px rgba(199, 93, 133, .18));
+.ds4 .back.pressed, .ds4 .start.pressed {
+    /* background-position-y: -21px; */
+    /* margin-top: 2px; */
+    opacity: 1;
 }
 
-.edit .touchpad,
-.edit .face,
-.edit .back,
-.edit .front,
-.edit .meta {
-  background-color: #fffdfd !important;
-  background-image:
-    radial-gradient(circle at 14% 20%, rgba(217,111,150,.60) 0 2px, transparent 3px),
-    radial-gradient(circle at 19% 16%, rgba(255,205,220,.95) 0 5px, transparent 6px),
-    radial-gradient(circle at 24% 22%, rgba(239,154,183,.65) 0 3px, transparent 4px),
-    radial-gradient(ellipse at 19% 20%, rgba(239,154,183,.28) 0 14%, transparent 15%),
-    radial-gradient(circle at 83% 78%, rgba(217,111,150,.55) 0 2px, transparent 3px),
-    radial-gradient(circle at 78% 82%, rgba(255,205,220,.9) 0 5px, transparent 6px),
-    radial-gradient(circle at 73% 76%, rgba(239,154,183,.58) 0 3px, transparent 4px),
-    radial-gradient(ellipse at 78% 79%, rgba(239,154,183,.25) 0 14%, transparent 15%),
-    linear-gradient(135deg, #fff 0%, #fff8fa 100%) !important;
+.ds4 .back {
+    float: left;
+    /* width: 28px; */
 }
 
-.edit .button,
-.edit .dpad .face {
-  border-color: rgba(217,111,150,.55) !important;
-  box-shadow: inset 0 1px 2px rgba(255,255,255,.95), 0 1px 4px rgba(145,75,101,.14);
+.ds4 .start {
+    float: right;
+    /* width: 28px; */
+    background-position: 0px 0;
 }
 
-.edit .pressed,
-.edit .button.pressed,
-.edit .trigger.pressed,
-.edit .bumper.pressed {
-  box-shadow: 0 0 0 2px rgba(242,168,189,.32), inset 0 1px 5px rgba(198,76,124,.28) !important;
+.ds4 .abxy {
+    position: absolute;
+    width: 170px;
+    height: 171px;
+    top: 200px;
+    left: 762px;
 }
+
+.ds4 .button {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/FaceButtons.png);
+}
+
+.ds4 .button.pressed {
+    background-position-y: 55px;
+    /* margin-top: 5px; */
+}
+
+.ds4 .a {
+    background-position: 0 0;
+    bottom: 0px;
+    left: 58px;
+}
+
+.ds4 .b {
+    background-position: -57px 0;
+    top: 57px;
+    right: -3px;
+}
+
+.ds4 .x {
+    background-position: -113px 0;
+    top: 57px;
+}
+
+.ds4 .y {
+    background-position: 55px 0;
+    left: 58px;
+    bottom: 119px;
+}
+
+.ds4 .sticks {
+    position: absolute;
+    width: 364px;
+    height: 105px;
+    top: 348px;
+    left: 422px;
+}
+
+.ds4 .stick {
+    position: absolute;
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Sticks.png);
+    height: 94px;
+    width: 94px;
+}
+
+.ds4 .stick.pressed.left {
+    background-position-x: -96px;
+}
+
+.ds4 .stick.pressed.right {
+    background-position-x: -192px;
+}
+
+.ds4 .stick.left {
+    top: 0;
+    left: 0;
+}
+
+.ds4 .stick.right {
+    top: calc(100% - 105px);
+    left: calc(100% - 105px);
+}
+
+.ds4 .dpad {
+    position: absolute;
+    width: 125px;
+    height: 126px;
+    top: 220px;
+    left: 286px;
+}
+
+.ds4 .face {
+    background: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Dpad.png);
+    position: absolute;
+}
+
+.ds4 .face.up, .ds4 .face.down {
+    width: 37px;
+    height: 52px;
+}
+
+.ds4 .face.left, .ds4 .face.right {
+    width: 52px;
+    height: 40px;
+}
+
+.ds4 .face.up {
+    left: 44px;
+    top: 0;
+    background-position: -37px 0px;
+}
+
+.ds4 .face.down {
+    left: 44px;
+    bottom: 0;
+    background-position: 0px 0;
+}
+
+.ds4 .face.left {
+    top: 45px;
+    left: 0;
+    background-position: 104px 0;
+}
+
+.ds4 .face.right {
+    top: 45px;
+    right: 0px;
+    background-position: 52px 0;
+}
+
+.ds4 .face.pressed {
+    /* margin-top: 5px; */
+    background-position-y: 52px;
+}
+
+.ds4.half {
+    margin-top: -300px;
+}
+
+/*END PS4 Controller Styling*/
+
+.ds4.white .back, .ds4 .start {
+    background-image: url(https://raw.githubusercontent.com/thinkii/PS5-Overlay/master/Start.png);
+    width: 26px;
+    height: 43px;
+}
+
+/*END PS4 White Controller Styling*/
+
+
+/* Cherry blossom finish; original controller geometry and live input sprites preserved. */
+.controller.ds4 { background-size: 1200px 700px, 1200px 700px; filter: drop-shadow(0 8px 12px rgba(125,76,94,.18)); }
