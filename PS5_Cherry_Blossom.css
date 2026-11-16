@@ -88,3 +88,51 @@
 .ds5 .stick {
   border-color: rgba(220,151,176,.48) !important;
 }
+
+
+/* GamepadViewer adds .edit when editcss= is used. These selectors are
+   intentionally scoped to that class so they work with the selected PS5 skin. */
+.edit .face,
+.edit .meta,
+.edit .touchpad,
+.edit .back,
+.edit .front,
+.edit .bumper,
+.edit .trigger,
+.edit .stick,
+.edit .button,
+.edit .dpad,
+.edit .abxy {
+  filter: drop-shadow(0 1px 2px rgba(199, 93, 133, .18));
+}
+
+.edit .touchpad,
+.edit .face,
+.edit .back,
+.edit .front,
+.edit .meta {
+  background-color: #fffdfd !important;
+  background-image:
+    radial-gradient(circle at 14% 20%, rgba(217,111,150,.60) 0 2px, transparent 3px),
+    radial-gradient(circle at 19% 16%, rgba(255,205,220,.95) 0 5px, transparent 6px),
+    radial-gradient(circle at 24% 22%, rgba(239,154,183,.65) 0 3px, transparent 4px),
+    radial-gradient(ellipse at 19% 20%, rgba(239,154,183,.28) 0 14%, transparent 15%),
+    radial-gradient(circle at 83% 78%, rgba(217,111,150,.55) 0 2px, transparent 3px),
+    radial-gradient(circle at 78% 82%, rgba(255,205,220,.9) 0 5px, transparent 6px),
+    radial-gradient(circle at 73% 76%, rgba(239,154,183,.58) 0 3px, transparent 4px),
+    radial-gradient(ellipse at 78% 79%, rgba(239,154,183,.25) 0 14%, transparent 15%),
+    linear-gradient(135deg, #fff 0%, #fff8fa 100%) !important;
+}
+
+.edit .button,
+.edit .dpad .face {
+  border-color: rgba(217,111,150,.55) !important;
+  box-shadow: inset 0 1px 2px rgba(255,255,255,.95), 0 1px 4px rgba(145,75,101,.14);
+}
+
+.edit .pressed,
+.edit .button.pressed,
+.edit .trigger.pressed,
+.edit .bumper.pressed {
+  box-shadow: 0 0 0 2px rgba(242,168,189,.32), inset 0 1px 5px rgba(198,76,124,.28) !important;
+}
