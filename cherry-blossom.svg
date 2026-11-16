@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<defs>
+ <g id="blossom" stroke="#d98ba7" stroke-width="2" stroke-linejoin="round">
+  <ellipse cy="-17" rx="11" ry="18" fill="#fff0f5"/><ellipse cy="-17" rx="11" ry="18" fill="#f8c8d8" transform="rotate(72)"/><ellipse cy="-17" rx="11" ry="18" fill="#fff5f7" transform="rotate(144)"/><ellipse cy="-17" rx="11" ry="18" fill="#f4b7cb" transform="rotate(216)"/><ellipse cy="-17" rx="11" ry="18" fill="#fff0f5" transform="rotate(288)"/><circle r="6" fill="#d99a43" stroke="#fff7e8"/>
+ </g>
+ <g id="sprig" fill="none" stroke="#829b83" stroke-width="3" stroke-linecap="round"><path d="M0 0 Q30 -22 56 -55"/><path d="M17 -13 q-18 -22 -30 -12 q3 17 30 12"/><path d="M35 -32 q-2 -25 18 -28 q5 17 -18 28"/></g>
+</defs>
+<!-- restrained sakura clusters placed on the white grips and outer shell -->
+<g opacity=".96">
+ <use href="#sprig" x="165" y="500" transform="rotate(-12 165 500)"/>
+ <use href="#blossom" x="151" y="463" transform="scale(1.05)"/>
+ <use href="#blossom" x="205" y="514" transform="scale(.72)"/>
+ <use href="#blossom" x="117" y="540" transform="scale(.62)"/>
+ <use href="#sprig" x="1030" y="500" transform="translate(2060 0) scale(-1 1)"/>
+ <use href="#blossom" x="1045" y="463" transform="scale(1.05)"/>
+ <use href="#blossom" x="995" y="514" transform="scale(.72)"/>
+ <use href="#blossom" x="1080" y="540" transform="scale(.62)"/>
+ <use href="#blossom" x="345" y="170" transform="scale(.48)"/>
+ <use href="#blossom" x="855" y="170" transform="scale(.48)"/>
+</g>
+<g fill="#e7a6bb" opacity=".75"><circle cx="240" cy="472" r="4"/><circle cx="226" cy="490" r="3"/><circle cx="960" cy="472" r="4"/><circle cx="974" cy="490" r="3"/><circle cx="310" cy="205" r="3"/><circle cx="890" cy="205" r="3"/></g>
+</svg>
